@@ -44,9 +44,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "SEGGER_RTT.h"
 
+#include "nrf_drv_common.h"
+#include "nrf_drv_ppi.h"
+#include "nrf_drv_gpiote.h"
+#include <nrf.h>
+
 #if defined(WITH_ACK_SLAVE)||defined(WITHOUT_ACK_SLAVE)
 #include "handle.h"
 #endif
+
 
 /* Debug macros for debugging with logic analyzer */
 #define SET_PIN(x) NRF_GPIO->OUTSET = (1 << (x))
@@ -97,7 +103,9 @@ static uint32_t packet_rcv __attribute__((at(0x2000468C))) ;
 
 #endif
 
-
+uint32_t err_code;
+typedef uint32_t ret_code_t; // for ppi
+nrf_ppi_channel_t ppi_channel5;
 
 /**
 * @brief General error handler.
@@ -403,7 +411,42 @@ void LFCK_clock_initialization()
      
     }		
 }
+/*
+void RADIO_IRQHandler(void){
+		NRF_RADIO->EVENTS_PAYLOAD = 0;
+		nrf_gpio_pin_toggle(21);
+}
 
+//Set intenset for payload
+void init_payload_interrupt(void)
+{
+    NRF_RADIO->INTENSET = RADIO_INTENSET_PAYLOAD_Enabled << RADIO_INTENSET_PAYLOAD_Pos;
+
+    NVIC_SetPriority(RADIO_IRQn, 1);
+    NVIC_ClearPendingIRQ(RADIO_IRQn);
+    NVIC_EnableIRQ(RADIO_IRQn);
+}
+*/
+
+// set ppi for end event and led 1 toggle
+void set_ppi(){
+    ret_code_t c = nrf_drv_gpiote_init();
+    
+    //config event task
+    nrf_drv_gpiote_out_config_t config = GPIOTE_CONFIG_OUT_TASK_TOGGLE(true);
+    
+    //config event task for radio
+    err_code = nrf_drv_gpiote_out_init(21, &config);
+		
+		err_code = nrf_drv_ppi_channel_alloc(&ppi_channel5);
+    APP_ERROR_CHECK(err_code);
+    err_code = nrf_drv_ppi_channel_assign(ppi_channel5,
+																					0x40001108, // payload
+                                          //0x4000110c, //end
+                                          nrf_drv_gpiote_out_task_addr_get(21));
+    err_code = nrf_drv_ppi_channel_enable(ppi_channel5);
+		nrf_drv_gpiote_out_task_enable(21);
+}
 
 /** @brief main function */
 int main(void)
@@ -412,12 +455,12 @@ int main(void)
     gpio_init();
     NRF_GPIO->OUTSET = (1 << 4);
     /* Enable Softdevice (including sd_ble before framework */
-    SOFTDEVICE_HANDLER_INIT(MESH_CLOCK_SOURCE, NULL);
-    softdevice_ble_evt_handler_set(sd_ble_evt_handler); /* app-defined event handler, as we need to send it to the nrf_adv_conn module and the rbc_mesh */
-    softdevice_sys_evt_handler_set(rbc_mesh_sd_evt_handler);
     
-    
-    
+		SOFTDEVICE_HANDLER_INIT(MESH_CLOCK_SOURCE, NULL);
+    softdevice_ble_evt_handler_set(sd_ble_evt_handler); // app-defined event handler, as we need to send it to the nrf_adv_conn module and the rbc_mesh
+		softdevice_sys_evt_handler_set(rbc_mesh_sd_evt_handler);
+	
+		set_ppi();
     
     #if defined(WITH_ACK_MASTER) || defined (WITHOUT_ACK_MASTER)	
     
@@ -454,7 +497,7 @@ int main(void)
 		{
 			node_data[i] = 1 ;  
 		}
-		
+
     error_code = rbc_mesh_value_set(node_handle,&node_data[0],(RBC_MESH_VALUE_MAX_LEN-1));
     APP_ERROR_CHECK(error_code);
     error_code = rbc_mesh_tx_event_set(node_handle, true);
@@ -496,7 +539,7 @@ int main(void)
             rbc_mesh_event_handler(&evt);
             rbc_mesh_event_release(&evt);
         }
-
+			
         sd_app_evt_wait();
     }
 
