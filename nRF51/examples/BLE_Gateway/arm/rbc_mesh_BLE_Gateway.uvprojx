@@ -10,12 +10,12 @@
       <TargetName>nRF51422 xxAC</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF51822_xxAB</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IROM(0x00000000,0x20000) IRAM(0x20000000,0x4000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -125,47 +125,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -369,6 +328,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>BOARD_PCA10028 NRF51 BLE_STACK_SUPPORT_REQD S110 SOFTDEVICE_PRESENT DEBUG</Define>
@@ -386,6 +348,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -528,6 +491,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -580,6 +546,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -682,6 +651,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -724,6 +696,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -777,12 +750,12 @@
       <TargetName>nRF51422 xxAC serial</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF51822_xxAC</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IROM(0x00000000,0x40000) IRAM(0x20000000,0x8000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -892,47 +865,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -1136,6 +1068,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>MESH_DFU RTT_LOG DEBUG BUTTONS BOARD_PCA10028 NRF51 BLE_STACK_SUPPORT_REQD S110 SOFTDEVICE_PRESENT RBC_MESH_SERIAL RBC_MESH_DATA_CACHE_ENTRIES=2 RBC_MESH_HANDLE_CACHE_ENTRIES=3</Define>
@@ -1153,6 +1088,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1355,6 +1291,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -1397,6 +1336,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -1455,7 +1395,7 @@
         <TargetCommonOption>
           <Device>nRF51822_xxAC</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IROM(0x00000000,0x40000) IRAM(0x20000000,0x8000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -1565,47 +1505,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -1809,6 +1708,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>RBC_MESH_DEBUG DEBUG_LOG_RTT BOARD_PCA10028 NRF51 BLE_STACK_SUPPORT_REQD S110 SOFTDEVICE_PRESENT BUTTONS DEBUG</Define>
@@ -1826,6 +1728,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1968,6 +1871,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2020,6 +1926,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2122,6 +2031,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2164,6 +2076,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2222,7 +2135,7 @@
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IRAM(0x20000000,0x10000) IROM(0x00000000,0x80000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -2332,47 +2245,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -2576,6 +2448,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>RBC_MESH_SERIAL MESH_DFU RAM_R1_BASE=0x20003000 NRF_SD_BLE_API_VERSION=3 NORDIC_SDK_VERSION=12 BOARD_PCA10040 NRF52 NRF52832 BLE_STACK_SUPPORT_REQD S132 SOFTDEVICE_PRESENT DEBUG</Define>
@@ -2593,6 +2468,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -2735,6 +2611,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2787,6 +2666,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2889,6 +2771,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2946,6 +2831,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -2988,6 +2876,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -3036,7 +2925,7 @@
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IRAM(0x20000000,0x10000) IROM(0x00000000,0x80000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -3146,47 +3035,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -3390,6 +3238,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>MESH_DFU RBC_MESH_SERIAL RAM_R1_BASE=0x20003000 NRF_SD_BLE_API_VERSION=3 NORDIC_SDK_VERSION=12 BOARD_PCA10040 NRF52 NRF52832 BLE_STACK_SUPPORT_REQD S132 SOFTDEVICE_PRESENT DEBUG</Define>
@@ -3407,6 +3258,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -3549,6 +3401,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -3601,6 +3456,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -3713,6 +3571,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -3755,6 +3616,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -3803,7 +3665,7 @@
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IRAM(0x20000000,0x10000) IROM(0x00000000,0x80000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -3913,47 +3775,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -4157,6 +3978,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>MESH_DFU RBC_MESH_SERIAL BLINKY RAM_R1_BASE=0x20003000 NRF_SD_BLE_API_VERSION=3 NORDIC_SDK_VERSION=12 BOARD_PCA10040 NRF52 NRF52832 BLE_STACK_SUPPORT_REQD S132 SOFTDEVICE_PRESENT DEBUG</Define>
@@ -4174,6 +3998,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -4316,6 +4141,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -4368,6 +4196,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -4480,6 +4311,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -4522,6 +4356,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -4570,7 +4405,7 @@
         <TargetCommonOption>
           <Device>nRF51822_xxAC</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IROM(0x00000000,0x40000) IRAM(0x20000000,0x8000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -4680,47 +4515,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -4924,6 +4718,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>MESH_DFU RTT_LOG DEBUG  BOARD_PCA10031 NRF51 BLE_STACK_SUPPORT_REQD S110 SOFTDEVICE_PRESENT RBC_MESH_SERIAL BLINKY RBC_MESH_DATA_CACHE_ENTRIES=2 RBC_MESH_HANDLE_CACHE_ENTRIES=3</Define>
@@ -4941,6 +4738,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -5143,6 +4941,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -5185,6 +4986,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -5238,12 +5040,12 @@
       <TargetName>nRF51422 xxAC serial blinky_10028</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>nRF51822_xxAC</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IROM(0x00000000,0x40000) IRAM(0x20000000,0x8000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -5353,47 +5155,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -5597,6 +5358,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>MESH_DFU RTT_LOG DEBUG  BOARD_PCA10028 NRF51 BLE_STACK_SUPPORT_REQD S110 SOFTDEVICE_PRESENT RBC_MESH_SERIAL BLINKY RBC_MESH_DATA_CACHE_ENTRIES=2 RBC_MESH_HANDLE_CACHE_ENTRIES=3</Define>
@@ -5614,6 +5378,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -5816,6 +5581,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -5858,6 +5626,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -5916,7 +5685,7 @@
         <TargetCommonOption>
           <Device>nRF52832_xxAA</Device>
           <Vendor>Nordic Semiconductor</Vendor>
-          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.5.0</PackID>
+          <PackID>NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1</PackID>
           <PackURL>http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/</PackURL>
           <Cpu>IRAM(0x20000000,0x10000) IROM(0x00000000,0x80000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -6026,47 +5795,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -6270,6 +5998,9 @@
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>BUTTONS RAM_R1_BASE=0x20003000 NRF_SD_BLE_API_VERSION=3 NORDIC_SDK_VERSION=12 BOARD_PCA10040 NRF52 NRF52832 BLE_STACK_SUPPORT_REQD S132 SOFTDEVICE_PRESENT DEBUG</Define>
@@ -6287,6 +6018,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -6429,6 +6161,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -6481,6 +6216,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -6583,6 +6321,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -6640,6 +6381,9 @@
                     <v6LangP>0</v6LangP>
                     <vShortEn>0</vShortEn>
                     <vShortWch>0</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -6682,6 +6426,7 @@
                     <NoWarn>2</NoWarn>
                     <uSurpInc>2</uSurpInc>
                     <useXO>2</useXO>
+                    <uClangAs>2</uClangAs>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>

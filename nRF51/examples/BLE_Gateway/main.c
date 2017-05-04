@@ -221,12 +221,34 @@ void gpio_init(void)
 
 }
 
+
+void gpiote_out_init(uint32_t index, uint32_t pin, uint32_t polarity, uint32_t init_val) {
+    NRF_GPIOTE->CONFIG[index] |= ((GPIOTE_CONFIG_MODE_Task << GPIOTE_CONFIG_MODE_Pos) & GPIOTE_CONFIG_MODE_Msk) |
+                            ((pin << GPIOTE_CONFIG_PSEL_Pos) & GPIOTE_CONFIG_PSEL_Msk) |
+                            ((polarity << GPIOTE_CONFIG_POLARITY_Pos) & GPIOTE_CONFIG_POLARITY_Msk) |
+                            ((init_val << GPIOTE_CONFIG_OUTINIT_Pos) & GPIOTE_CONFIG_OUTINIT_Msk);
+}
+
+void init_ppi() {
+    const uint32_t GPIO_CH = 0;
+    //const uint32_t PPI_CH0 = 10;
+    const uint32_t PPI_CH1 = 11;
+    gpiote_out_init(GPIO_CH, 21, GPIOTE_CONFIG_POLARITY_Toggle, GPIOTE_CONFIG_OUTINIT_Low);
+
+    //NRF_PPI->CH[PPI_CH0].EEP = (uint32_t) &(NRF_RADIO->EVENTS_READY);
+    //NRF_PPI->CH[PPI_CH0].TEP = (uint32_t) &(NRF_GPIOTE->TASKS_OUT[GPIO_CH]);
+    NRF_PPI->CH[PPI_CH1].EEP = (uint32_t) &(NRF_RADIO->EVENTS_END);
+    NRF_PPI->CH[PPI_CH1].TEP = (uint32_t) &(NRF_GPIOTE->TASKS_OUT[GPIO_CH]);
+    NRF_PPI->CHENSET = (1 << PPI_CH1);// | (1 << PPI_CH1);
+}
+
+
 /** @brief main function */
 int main(void)
 {
     /* init leds and pins */
     gpio_init();
-
+		init_ppi();
     /* Enable Softdevice (including sd_ble before framework */
 #ifdef NRF52
     SOFTDEVICE_HANDLER_INIT(&MESH_CLOCK_SOURCE,NULL); 

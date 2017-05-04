@@ -700,9 +700,9 @@
           <GroupName>nRF_Drivers</GroupName>
           <Files>
             <File>
-              <FileName>nrf_drv_gpiote.c</FileName>
+              <FileName>nrf_drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
             </File>
             <File>
               <FileName>nrf_drv_ppi.c</FileName>
@@ -710,9 +710,9 @@
               <FilePath>..\..\..\..\..\..\components\drivers_nrf\ppi\nrf_drv_ppi.c</FilePath>
             </File>
             <File>
-              <FileName>nrf_drv_common.c</FileName>
+              <FileName>nrf_drv_gpiote.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1412,9 +1412,9 @@
           <GroupName>nRF_Drivers</GroupName>
           <Files>
             <File>
-              <FileName>nrf_drv_gpiote.c</FileName>
+              <FileName>nrf_drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
             </File>
             <File>
               <FileName>nrf_drv_ppi.c</FileName>
@@ -1422,9 +1422,9 @@
               <FilePath>..\..\..\..\..\..\components\drivers_nrf\ppi\nrf_drv_ppi.c</FilePath>
             </File>
             <File>
-              <FileName>nrf_drv_common.c</FileName>
+              <FileName>nrf_drv_gpiote.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2124,9 +2124,9 @@
           <GroupName>nRF_Drivers</GroupName>
           <Files>
             <File>
-              <FileName>nrf_drv_gpiote.c</FileName>
+              <FileName>nrf_drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
             </File>
             <File>
               <FileName>nrf_drv_ppi.c</FileName>
@@ -2134,9 +2134,9 @@
               <FilePath>..\..\..\..\..\..\components\drivers_nrf\ppi\nrf_drv_ppi.c</FilePath>
             </File>
             <File>
-              <FileName>nrf_drv_common.c</FileName>
+              <FileName>nrf_drv_gpiote.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2836,9 +2836,9 @@
           <GroupName>nRF_Drivers</GroupName>
           <Files>
             <File>
-              <FileName>nrf_drv_gpiote.c</FileName>
+              <FileName>nrf_drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
             </File>
             <File>
               <FileName>nrf_drv_ppi.c</FileName>
@@ -2846,9 +2846,9 @@
               <FilePath>..\..\..\..\..\..\components\drivers_nrf\ppi\nrf_drv_ppi.c</FilePath>
             </File>
             <File>
-              <FileName>nrf_drv_common.c</FileName>
+              <FileName>nrf_drv_gpiote.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3548,9 +3548,9 @@
           <GroupName>nRF_Drivers</GroupName>
           <Files>
             <File>
-              <FileName>nrf_drv_gpiote.c</FileName>
+              <FileName>nrf_drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
             </File>
             <File>
               <FileName>nrf_drv_ppi.c</FileName>
@@ -3558,9 +3558,9 @@
               <FilePath>..\..\..\..\..\..\components\drivers_nrf\ppi\nrf_drv_ppi.c</FilePath>
             </File>
             <File>
-              <FileName>nrf_drv_common.c</FileName>
+              <FileName>nrf_drv_gpiote.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</FilePath>
+              <FilePath>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -43,12 +43,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdio.h>
 
 #include "SEGGER_RTT.h"
-
+/*
 #include "nrf_drv_common.h"
 #include "nrf_drv_ppi.h"
 #include "nrf_drv_gpiote.h"
 #include <nrf.h>
-
+*/
 #if defined(WITH_ACK_SLAVE)||defined(WITHOUT_ACK_SLAVE)
 #include "handle.h"
 #endif
@@ -102,11 +102,11 @@ static uint32_t packet_count __attribute__((at(0x20004688)));
 static uint32_t packet_rcv __attribute__((at(0x2000468C))) ;
 
 #endif
-
+/*
 uint32_t err_code;
 typedef uint32_t ret_code_t; // for ppi
 nrf_ppi_channel_t ppi_channel5;
-
+*/
 /**
 * @brief General error handler.
 */
@@ -428,6 +428,7 @@ void init_payload_interrupt(void)
 }
 */
 
+/*
 // set ppi for end event and led 1 toggle
 void set_ppi(){
     ret_code_t c = nrf_drv_gpiote_init();
@@ -448,6 +449,28 @@ void set_ppi(){
 		nrf_drv_gpiote_out_task_enable(21);
 }
 
+*/
+
+void gpiote_out_init(uint32_t index, uint32_t pin, uint32_t polarity, uint32_t init_val) {
+    NRF_GPIOTE->CONFIG[index] |= ((GPIOTE_CONFIG_MODE_Task << GPIOTE_CONFIG_MODE_Pos) & GPIOTE_CONFIG_MODE_Msk) |
+                            ((pin << GPIOTE_CONFIG_PSEL_Pos) & GPIOTE_CONFIG_PSEL_Msk) |
+                            ((polarity << GPIOTE_CONFIG_POLARITY_Pos) & GPIOTE_CONFIG_POLARITY_Msk) |
+                            ((init_val << GPIOTE_CONFIG_OUTINIT_Pos) & GPIOTE_CONFIG_OUTINIT_Msk);
+}
+
+void init_ppi() {
+    const uint32_t GPIO_CH = 0;
+    //const uint32_t PPI_CH0 = 10;
+    const uint32_t PPI_CH1 = 11;
+    gpiote_out_init(GPIO_CH, 21, GPIOTE_CONFIG_POLARITY_Toggle, GPIOTE_CONFIG_OUTINIT_Low);
+
+    //NRF_PPI->CH[PPI_CH0].EEP = (uint32_t) &(NRF_RADIO->EVENTS_READY);
+    //NRF_PPI->CH[PPI_CH0].TEP = (uint32_t) &(NRF_GPIOTE->TASKS_OUT[GPIO_CH]);
+    NRF_PPI->CH[PPI_CH1].EEP = (uint32_t) &(NRF_RADIO->EVENTS_END);
+    NRF_PPI->CH[PPI_CH1].TEP = (uint32_t) &(NRF_GPIOTE->TASKS_OUT[GPIO_CH]);
+    NRF_PPI->CHENSET = (1 << PPI_CH1);// | (1 << PPI_CH1);
+}
+
 /** @brief main function */
 int main(void)
 {
@@ -460,7 +483,7 @@ int main(void)
     softdevice_ble_evt_handler_set(sd_ble_evt_handler); // app-defined event handler, as we need to send it to the nrf_adv_conn module and the rbc_mesh
 		softdevice_sys_evt_handler_set(rbc_mesh_sd_evt_handler);
 	
-		set_ppi();
+		init_ppi();
     
     #if defined(WITH_ACK_MASTER) || defined (WITHOUT_ACK_MASTER)	
     

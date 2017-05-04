@@ -2423,7 +2423,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\rbc_mesh\src\rbc_mesh.c</PathWithFileName>
@@ -2774,8 +2774,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_gpiote.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_common.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -2798,8 +2798,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\..\..\..\components\drivers_nrf\common\nrf_drv_common.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_common.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\..\..\..\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_gpiote.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
